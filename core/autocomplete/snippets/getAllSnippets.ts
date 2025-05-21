@@ -164,7 +164,7 @@ export const getAllSnippets = async ({
     racePromise(contextRetrievalService.getRootPathSnippets(helper)),
     racePromise(contextRetrievalService.getSnippetsFromImportDefinitions(helper)),
     IDE_SNIPPETS_ENABLED ? racePromise(getIdeSnippets(helper, ide, getDefinitionsFromLsp)) : [],
-    racePromise(getDiffSnippets(ide)),
+    [],
     racePromise(getClipboardSnippets(ide)),
   ]);
 
